@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
 
 .navbar{
-    background-color: aqua;
+    background-color: #61738E;
     justify-content: space-around;
     align-items: center;
     font-family: 'Noto Sans KR', sans-serif;
@@ -13,12 +14,14 @@
     display: flex;
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color: beige;
+    background-color: #61738E;
     justify-content: space-around;
     align-items: center;
 }
 .navbar .upper-nav .logo{
-     font-size: 40px;
+    font-size: 40px;
+    color: white;
+    font-family: 'Otomanopee One', sans-serif;
  }
 
 .navbar .upper-nav .search{
@@ -31,28 +34,48 @@
     height: 30px;
     background-color: white;
     width: 350px;
-    border-radius: 10px;
+    border: 0;
+    border-radius: 10px 2px 0px 10px;
     outline: none;
-    border: 0px solid;
     font-family: 'Noto Sans KR', sans-serif;
-
-
+    padding-left: 10px;
 }
 
 
 .navbar .upper-nav .mini-nav{
-    background-color: greenyellow;
+    /*background-color: greenyellow;*/
     width: 30%;
     display: flex;
     justify-content: space-around;
 }
+.navbar .upper-nav .mini-nav a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar .upper-nav .mini-nav a:hover{
+    text-decoration: none;
+    color: #A3AD93;
+}
+
 
 
 .navbar .categories{
-    margin-left: 20%;
+    margin-left: 15%;
     top: 0;
-    width: 60%;
-    background-color: azure;
+    width: 70%;
+    background-color: #61738E;
     display: flex;
     justify-content: space-around;
+}
+
+.navbar .categories a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+.navbar .categories a:hover{
+    text-decoration: none;
+    font-weight: bold;
+    color: #FFAD69;
 }
