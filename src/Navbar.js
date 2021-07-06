@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
 import { styled } from '@material-ui/core/styles';
 
@@ -24,8 +25,9 @@ const Navbar = () => {
                         <StyledSearchIcon />
                     </div>
                     <div className="mini-nav">
-                        <a href="/login"> Login</a>
-                        <a href="/signup">Sign up</a>
+                        <Link to="/login" >Log in</Link>
+
+                        <Link to="/register" >Sign up</Link>
                         <a href="/profile">Profile</a>
                     </div>
                 </div>

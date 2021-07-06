@@ -27,7 +27,8 @@ module.exports = function (env) {
         // https://webpack.js.org/configuration/output/
         output: {
             path: path.resolve(__dirname, 'build'),
-            filename: 'static/js/[name].[hash].js'
+            filename: 'static/js/[name].[hash].js',
+            publicPath: '/',
         },
 
         module: {
@@ -174,6 +175,7 @@ module.exports = function (env) {
             compress: true,
             port: 9000,
             publicPath: '/',
+            historyApiFallback: true,
             // 设置代理，比如，请求 /api/abc 会代理制 http://localhost:7000/abc
             // https://webpack.js.org/configuration/dev-server/#devserver-proxy
             // https://github.com/chimurai/http-proxy-middleware#http-proxy-middleware-options
@@ -192,4 +194,6 @@ module.exports = function (env) {
             'hidden-source-map' :
             'cheap-module-eval-source-map',
     };
+
+
 }
