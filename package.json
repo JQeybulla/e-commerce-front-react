@@ -36,6 +36,6 @@
     },
     "scripts": {
         "start": "node scripts/start.js",
-        "build": "export NODE_ENV=production && rm -rf ./build && webpack --env.production --optimize-minimize --history-api-fallback"
+        "build": "export NODE_ENV=production && rm -rf ./build && webpack --env.production --optimize-minimize"
     }
 }
