@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
+import './App.css';
 import Home from './Home';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
@@ -9,7 +9,6 @@ function App() {
     return (
         <Router>
             <div className="App">
-
                 <div className="content">
                     <Switch>
                         <Route exact path="/" component={Home} />
