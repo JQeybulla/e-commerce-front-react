@@ -120,6 +120,13 @@ module.exports = function (env) {
                     query: {
                         name: 'static/media/[name].[hash:8].[ext]'
                     }
+                },
+                {
+                    test: /\.(png|jpg|gif)$/,
+                    use: [{
+                        loader: 'file-loader',
+                        options: {}
+                    }]
                 }
             ]
         },
@@ -162,7 +169,17 @@ module.exports = function (env) {
                         JSON.stringify("production") :
                         JSON.stringify("development")
                 }
-            })
+            }),
+            new webpack.ProvidePlugin({
+                $: 'jquery',
+                jQuery: 'jquery',
+                'window.jQuery': 'jquery'
+            }),
+            new webpack.ProvidePlugin({
+                $: path.resolve(path.join(__dirname, 'node_modules/jquery')),
+                jQuery: path.resolve(path.join(__dirname, 'node_modules/jquery')),
+                'window.jQuery': path.resolve(path.join(__dirname, 'node_modules/jquery')),
+            }),
         ],
         /**
          * webpack 自带的开发 server，配合 webpack-dev-server 命令使用
