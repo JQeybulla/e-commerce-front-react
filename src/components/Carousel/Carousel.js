@@ -1,52 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import axios from 'axios';
 import './carousel.css';
 
 const Carousel = () => {
-    return (
-        <div>
-            <OwlCarousel className="owl-theme" loop margin={10} nav>
-                <div className="item">
-                    <h4>112121</h4>
-                </div>
-                <div className="item">
-                    <h4>2</h4>
-                </div>
-                <div className="item">
-                    <h4>3</h4>
-                </div>
-                <div className="item">
-                    <h4>4</h4>
-                </div>
-                <div className="item">
-                    <h4>5</h4>
-                </div>
-                <div className="item">
-                    <h4>6</h4>
-                </div>
-                <div className="item">
-                    <h4>7</h4>
-                </div>
-                <div className="item">
-                    <h4>8</h4>
-                </div>
-                <div className="item">
-                    <h4>9</h4>
-                </div>
-                <div className="item">
-                    <h4>10</h4>
-                </div>
-                <div className="item">
-                    <h4>11</h4>
-                </div>
-                <div className="item">
-                    <h4>12</h4>
-                </div>
-            </OwlCarousel>;
-        </div>
-    );
+    const [elements, setElements] = useState(null);
+    const nullVariable = null;
+
+    useEffect(() => {
+        const url = 'http://127.0.0.1:8000/carousel/';
+        axios.get(url)
+            .then((response) => {
+                console.log(response.data[0].title);
+                setElements(response.data);
+            });
+    }, []);
+
+    if (elements) {
+        return (
+            <div>
+                <OwlCarousel className="owl-theme" loop margin={10} autoplay autoplayHoverPause dots={false}>
+
+
+                    {elements.map((element) => {
+                        return (
+                            <div className="item" key={element.id}>
+                                <img height="200px" width="90%" alt="alt" src={element.image} />
+                            </div>
+                        );
+                    })
+
+                    }
+                </OwlCarousel>
+            </div>
+        );
+    }
+    return <h1>{nullVariable}</h1>;
 };
 
 export default Carousel;

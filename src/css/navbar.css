@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
 
 .navbar{
-    background-color: rgba(10, 10, 10, 0.98);
+    background-color: rgba(10, 10, 10, 1);
     justify-content: space-around;
     align-items: center;
     font-family: 'Noto Sans KR', sans-serif;
@@ -139,7 +139,7 @@
 }
 
 .navbar .categories .category-item .category-menu{
-    background-color: rgba(10, 10, 10, 0.98);
+    background-color: rgba(10, 10, 10, 1);
     position: absolute;
     /*width:100px;*/
     /*display: none;*/
