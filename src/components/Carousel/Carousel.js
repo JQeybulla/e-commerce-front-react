@@ -13,7 +13,6 @@ const Carousel = () => {
         const url = 'http://127.0.0.1:8000/carousel/';
         axios.get(url)
             .then((response) => {
-                console.log(response.data[0].title);
                 setElements(response.data);
             });
     }, []);
@@ -21,13 +20,11 @@ const Carousel = () => {
     if (elements) {
         return (
             <div>
-                <OwlCarousel className="owl-theme" loop margin={10} autoplay autoplayHoverPause dots={false}>
-
-
+                <OwlCarousel className="owl-theme" loop margin={10} autoplay autoplayHoverPause dots={false} items={1} lazyLoad autoplayTimeout={2000}>
                     {elements.map((element) => {
                         return (
                             <div className="item" key={element.id}>
-                                <img height="200px" width="90%" alt="alt" src={element.image} />
+                                <img height="300px" width="90%" alt="alt" src={element.image} />
                             </div>
                         );
                     })
