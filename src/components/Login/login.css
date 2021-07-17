@@ -1,0 +1,110 @@
+
+
+.login{
+    /*background-color: #A3AD93;*/
+    /*display: flex;*/
+    height: 100%;
+}
+
+
+
+.login .form{
+    /*background: green;*/
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    margin-left: 25%;
+    margin-top: 100px;
+    /*justify-content: space-around;*/
+}
+
+.login .form .socials{
+    /*background: blue;*/
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+
+}
+
+.login .form .socials div{
+    width: 35%;
+    height: 40px;
+    /*border: 1px solid blueviolet;*/
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 16px;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #efefef;
+    cursor: pointer;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;
+}
+.login .form .submit{
+    width: 50%;
+    height: 40px;
+    margin-left: 25%;
+    margin-top: 30px;
+    color: white;
+    background-color: black;
+}
+
+.login .form .switch{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    background-color: white;
+    margin-left: 25%;
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+.login .form .switch .signin{
+    width: 49.4%;
+    height: 50px;
+    background-color: #101010;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius:3px;
+    cursor: pointer;
+    color: white;
+}
+.login .form .switch .register{
+    width: 49.4%;
+    height: 50px;
+    background-color: #808080;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius:3px;
+    cursor: pointer;
+}
+.login .form .text-area{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+
+}
+
+p{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    float: right;
+    right: 0;
+    /*background-color: white;*/
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5px;
+}
+p a{
+    color: black;
+}

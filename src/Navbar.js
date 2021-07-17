@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import PersonIcon from '@material-ui/icons/Person';// import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import { styled } from '@material-ui/core/styles';
 import axios from 'axios';
 import './css/navbar.css';
@@ -41,10 +43,10 @@ const Navbar = () => {
                             <StyledSearchIcon />
                         </div>
                         <div className="mini-nav">
-                            <Link to="/login" >Log in</Link>
+                            <Link className="link" to="/login" ><PersonIcon /><span>Daxil ol</span></Link>
 
-                            <Link to="/register" >Sign up</Link>
-                            <a href="/profile">Profile</a>
+                            {/* <Link to="/register" className="link" ><AccountCircleIcon /> Hello</Link> */}
+                            <a href="/profile" className="link"><ShoppingCartIcon size="large" /><span>Sebetim</span></a>
                         </div>
                     </div>
                     <div className="categories">

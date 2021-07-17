@@ -20,7 +20,7 @@ const Carousel = () => {
     if (elements) {
         return (
             <div>
-                <OwlCarousel className="owl-theme" loop margin={10} autoplay autoplayHoverPause dots={false} items={1} lazyLoad autoplayTimeout={2000}>
+                <OwlCarousel className="owl-theme" loop margin={10} autoplay dots={false} items={1} lazyLoad autoplayTimeout={2000}>
                     {elements.map((element) => {
                         return (
                             <div className="item" key={element.id}>

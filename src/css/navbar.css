@@ -54,12 +54,24 @@
     z-index: 1;
 }
 
+span{
+    margin-left: 3px;
+}
 
 .navbar .upper-nav .mini-nav{
     /*background-color: greenyellow;*/
     width: 30%;
     display: flex;
     justify-content: space-around;
+}
+.navbar .upper-nav .mini-nav .link{
+    /*background-color: greenyellow;*/
+    /*width: 30%;*/
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+    align-items: center;
+    /*background-color: #ff834b;*/
+    display: flex;
 }
 .navbar .upper-nav .mini-nav a{
     text-decoration: none;
