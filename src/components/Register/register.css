@@ -1,6 +1,6 @@
 
 
-.login{
+.registration{
     /*background-color: #A3AD93;*/
     /*display: flex;*/
     height: 100%;
@@ -8,7 +8,7 @@
 
 
 
-.login .form{
+.registration .form{
     /*background: green;*/
     display: flex;
     width: 50%;
@@ -18,7 +18,7 @@
     /*justify-content: space-around;*/
 }
 
-.login .form .socials{
+.registration .form .socials{
     /*background: blue;*/
     width: 50%;
     margin-left: 25%;
@@ -29,7 +29,7 @@
 
 }
 
-.login .form .socials div{
+.registration .form .socials div{
     width: 35%;
     height: 40px;
     /*border: 1px solid blueviolet;*/
@@ -46,7 +46,7 @@
     width: 40px;
     height: 40px;
 }
-.login .form .submit{
+.registration .form .submit{
     width: 50%;
     height: 40px;
     margin-left: 25%;
@@ -55,17 +55,28 @@
     background-color: black;
 }
 
-.login .form .switch{
+.registration .form .switch{
     display: flex;
     justify-content: space-between;
     width: 50%;
     background-color: white;
     margin-left: 25%;
     font-family: 'Noto Sans KR', sans-serif;
-    text-decoration: none;
 
 }
-.login .form .switch .signin{
+.registration .form .switch .signin{
+    width: 49.4%;
+    height: 50px;
+    background-color: #808080;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius:3px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+.registration .form .switch .register{
     width: 49.4%;
     height: 50px;
     background-color: #101010;
@@ -74,22 +85,10 @@
     justify-content: space-around;
     border-radius:3px;
     cursor: pointer;
-    color: white;
-    text-decoration: none;
-}
-.login .form .switch .register{
-    width: 49.4%;
-    height: 50px;
-    background-color: #808080;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-radius:3px;
-    /*cursor: pointer;*/
     text-decoration: none;
     color: white;
 }
-.login .form .text-area{
+.registration .form .text-area{
     width: 50%;
     margin-left: 25%;
     margin-top: 30px;

@@ -25,12 +25,13 @@ const Navbar = () => {
     const nullVariable = null;
 
     useEffect(() => {
-        const url = 'http://127.0.0.1:8000/categories/first/';
+        const url = 'https://django-ecommerces.herokuapp.com/categories/first/';
         axios.get(url)
             .then((response) => {
                 setNavbars(response.data);
             });
     }, []);
+
 
     if (navbars) {
         return (

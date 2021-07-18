@@ -2,8 +2,10 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import FacebookIcon from '@material-ui/icons/Facebook';
+import { Link } from 'react-router-dom';
 
-import Navbar from '../../Navbar';
+
+// import Navbar from '../../Navbar';
 
 import './login.css';
 
@@ -15,14 +17,14 @@ export default function Login() {
 
     return (
         <div className="login">
-            <Navbar />
+            {/* <Navbar /> */}
             <div className="form">
                 <div className="switch">
-                    <div className="signin">Daxil ol</div>
-                    <div className="register">Hesab ac</div>
+                    <Link to="/login" className="signin">Daxil ol</Link>
+                    <Link to="/register" className="register">Hesab ac</Link>
                 </div>
-                <TextField className="text-area" required id="outlined-required" label="Required" defaultValue="Email" variant="outlined" />
-                <TextField className="text-area" required id="outlined-required" label="Required" defaultValue="Password" variant="outlined" />
+                <TextField className="text-area" required id="outlined-required" label="Email" variant="outlined" />
+                <TextField className="text-area" required id="outlined-required" label="Password" variant="outlined" />
                 <p><a href="facebook.com">Sifremi unutdum</a></p>
                 <Button className="submit" variant="contained" >Daxil ol</Button>
                 <div className="socials">
