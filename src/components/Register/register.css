@@ -111,3 +111,9 @@ p{
 p a{
     color: black;
 }
+
+.submit .submit_s{
+    background-color: #ff834b;
+    width: 120%;
+    height: 40px;
+}

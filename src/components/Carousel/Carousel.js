@@ -10,7 +10,7 @@ const Carousel = () => {
     const nullVariable = null;
 
     useEffect(() => {
-        const url = 'https://django-ecommerces.herokuapp.com/carousel/';
+        const url = 'https://ecommerce.pythonanywhere.com/core/carousel/';
         axios.get(url)
             .then((response) => {
                 setElements(response.data);

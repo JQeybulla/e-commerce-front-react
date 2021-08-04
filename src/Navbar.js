@@ -7,7 +7,7 @@ import { styled } from '@material-ui/core/styles';
 import axios from 'axios';
 import './css/navbar.css';
 
-const Navbar = () => {
+const Navbar = (props) => {
     const placeholder = 'Search';
     const brandName = 'Pioneer';
     const StyledSearchIcon = styled(SearchIcon)({
@@ -21,11 +21,27 @@ const Navbar = () => {
     };
 
     const [navbars, setNavbars] = useState(null);
+    // const [isAuthenticated, setIsAuthenticated] = useState(false);
+    // const [user, setUser] = useState(null);
 
     const nullVariable = null;
 
     useEffect(() => {
-        const url = 'https://django-ecommerces.herokuapp.com/categories/first/';
+        // const config = {
+        //     headers: {
+        //         Authorization: `Token ${localStorage.getItem('token')}`,
+        //     },
+        // };
+        // axios.get('https://ecommerce.pythonanywhere.com/dj-rest-auth/user/', config).then(
+        //     (res) => {
+        //         setUser(res.data);
+        //         setIsAuthenticated(true);
+        //     },
+        //     (err) => {
+        //         console.log(err.response);
+        //     },
+        // );
+        const url = 'https://ecommerce.pythonanywhere.com/categories/first/';
         axios.get(url)
             .then((response) => {
                 setNavbars(response.data);
@@ -44,7 +60,7 @@ const Navbar = () => {
                             <StyledSearchIcon />
                         </div>
                         <div className="mini-nav">
-                            <Link className="link" to="/login" ><PersonIcon /><span>Daxil ol</span></Link>
+                            {props.auth ? <Link className="link" to="/profile"><span>{props.user.email}</span></Link> : <Link className="link" to="/login" ><PersonIcon /><span>Daxil ol</span></Link>}
 
                             {/* <Link to="/register" className="link" ><AccountCircleIcon /> Hello</Link> */}
                             <a href="/profile" className="link"><ShoppingCartIcon size="large" /><span>Sebetim</span></a>

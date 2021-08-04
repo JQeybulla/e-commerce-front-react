@@ -56,7 +56,18 @@
 
 span{
     margin-left: 3px;
+    /*color: white;*/
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
 }
+/*span:hover{*/
+/*    margin-left: 3px;*/
+/*    color: #A3AD93;*/
+/*    font-family: 'Noto Sans KR', sans-serif;*/
+/*    font-weight: normal;*/
+/*    font-size: 18px;*/
+/*}*/
 
 .navbar .upper-nav .mini-nav{
     /*background-color: greenyellow;*/
@@ -65,23 +76,24 @@ span{
     justify-content: space-around;
 }
 .navbar .upper-nav .mini-nav .link{
-    /*background-color: greenyellow;*/
-    /*width: 30%;*/
-    /*display: flex;*/
-    /*justify-content: space-around;*/
     align-items: center;
-    /*background-color: #ff834b;*/
     display: flex;
+}
+.navbar .upper-nav .mini-nav .link:hover{
+    align-items: center;
+    display: flex;
+    color: #A3AD93;
+    transition: 0.2s;
 }
 .navbar .upper-nav .mini-nav a{
     text-decoration: none;
     color: white;
 }
 
-.navbar .upper-nav .mini-nav a:hover{
-    text-decoration: none;
-    color: #A3AD93;
-}
+/*.navbar .upper-nav .mini-nav a:hover{*/
+/*    text-decoration: none;*/
+/*    color: #A3AD93;*/
+/*}*/
 
 
 
